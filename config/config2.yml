@@ -1,0 +1,21 @@
+---
+twitter:
+
+
+adaptors:
+    file: MarkovBot\Adaptor\DefaultAdaptor
+    twitter: MarkovBot\Adaptor\TwitterAdaptor
+    rss: MarkovBot\Adaptor\RSSAdaptor
+
+cache: @root/cache
+
+# Methods: currently only mixedsource and wordchain. When mixedsource, only 2 first sources will be used, the first part of the tweet
+# will come from the first source, and the second part will come from the second source.
+# when wordchain, all sources will be merged together to generate a random word chain.
+markov.settings:
+    method: mixedsource
+    sources:
+        - file://data/speech.txt
+        - file://data/rules.txt
+
+      # - twitter://erikaheidi

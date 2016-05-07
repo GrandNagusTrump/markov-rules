@@ -1,6 +1,10 @@
 # Markov Rules 
 `php console.php markov:test` .
 
+## Requirements
+
+Composer
+
 ## Commands
 
 ### twitter:test
